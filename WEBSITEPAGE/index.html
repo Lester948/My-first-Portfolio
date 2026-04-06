@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Bliss PH</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+  color: gold;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #111, #000);
+  animation: fadeIn 2s;
+}
+
+.hero h1 {
+  color: gold;
+  font-size: 40px;
+}
+
+.hero p {
+  color: #ccc;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: 0.4s;
+  animation: fadeUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255,215,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+  
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.price {
+  color: gold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FLOATING CONTACT BUTTONS */
+.float {
+  position: fixed;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.float a {
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.fb { background:#1877f2; }
+.wa { background:#25d366; }
+.ig { background:#e1306c; }
+
+/* POSITIONS */
+.float { bottom: 20px; }
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">DIAMOND BLISS PH💎</div>
+
+<div class="hero">
+  <h1>Timeless Elegance</h1>
+  <p>Luxury diamonds crafted for you</p>
+</div>
+
+<div class="products">
+
+  <div class="card">
+    <img src="bar necklace.jpg">
+    <div class="card-content">
+      <h3>Bar necklace</h3>
+      <div class="price">P63,000</div>
+      <button onclick="inquire('Diamond Necklace')">Inquire</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="horshoe2.jpg">
+    <div class="card-content">
+      <h3>Horseshoe Necklace</h3>
+      <div class="price">P106,000</div>
+      <button onclick="inquire('Diamond Necklace')">Inquire</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="yellownecklace (2).jpg">
+    <div class="card-content">
+      <h3> Smiley Yellow Dia Necklace</h3>
+      <div class="price">P69,000</div>
+      <button onclick="inquire('Diamond Necklace')">Inquire</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- FLOATING CONTACT -->
+<div class="float">
+  <a href="https://www.facebook.com/share/18D5sjwgM1/?mibextid=wwXIfr
+" target="_blank" class="fb">f</a>
+  <a href="#" onclick="openWhatsApp()" class="wa">w</a>
+  <a href="https://www.instagram.com/diamond_blissph3rd" target="_blank" class="ig">i</a>
+</div>
+
+<div class="footer">
+  © 2026 Diamond Bliss PH
+</div>
+
+<script>
+function inquire(product){
+  const msg = `Hello, I'm interested in ${product}`;
+  const phone = "639XXXXXXXXX"; // CHANGE THIS
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+
+function openWhatsApp(){
+  const phone = "639XXXXXXXXX"; // CHANGE THIS
+  window.open(`https://wa.me/${phone}`);
+}
+</script>
+
+</body>
+</html>

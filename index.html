@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* VIDEO SECTIONS */
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT OVERLAY */
+.overlay {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  color: white;
+}
+
+.overlay h2 {
+  margin: 0;
+}
+
+/* RIGHT SIDE BUTTONS */
+.actions {
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.actions div {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* CONTACT BAR */
+.contact {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.contact button {
+  background: #ff0050;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CONTACT -->
+<div class="contact">
+  <button onclick="contact()">Work With Me</button>
+</div>
+
+<!-- VIDEO 1 -->
+<div class="section">
+  <video src="video1.mp4" autoplay muted loop></video>
+  
+  <div class="overlay">
+    <h2>@yourname</h2>
+    <p>Product Ad | UGC Content</p>
+  </div>
+
+  <div class="actions">
+    <div onclick="contact()">💬</div>
+    <div onclick="contact()">📩</div>
+  </div>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="section">
+  <video src="video2.mp4" autoplay muted loop></video>
+  
+  <div class="overlay">
+    <h2>Skincare Promo</h2>
+    <p>High-converting ad</p>
+  </div>
+
+  <div class="actions">
+    <div onclick="contact()">💬</div>
+    <div onclick="contact()">📩</div>
+  </div>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="section">
+  <video src="video3.mp4" autoplay muted loop></video>
+  
+  <div class="overlay">
+    <h2>Brand Collaboration</h2>
+    <p>Engagement-focused content</p>
+  </div>
+
+  <div class="actions">
+    <div onclick="contact()">💬</div>
+    <div onclick="contact()">📩</div>
+  </div>
+</div>
+
+<script>
+function contact(){
+  const msg = "Hello, I want to work with you!";
+  const phone = "639XXXXXXXXX"; // CHANGE THIS
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.gradient-bg {
+    background: linear-gradient(-45deg, #234791, #6b4c9a, #d59b8c, #3f5efb);
+    background-size: 400% 400%;
+    animation: gradient-move 15s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content h1 {
+    background: rgba(255, 255, 255, 0, 1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
