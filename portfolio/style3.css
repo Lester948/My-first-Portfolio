@@ -31,6 +31,16 @@ header {
 
 header h1 { color: #a404cc; }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
 nav a {
   margin-left: 20px;
   color: #ccc;
@@ -440,6 +450,170 @@ button {
   .section-title,
   .hero h2 {
     font-size: 36px;
+  }
+}
+
+/* Mobile responsiveness for tablets and smaller screens */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin-left: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .hero-right video,
+  .about-card video {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-card {
+    padding: 5px;
+  }
+
+  .about-card {
+    padding: 5px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .services {
+    gap: 15px;
+  }
+
+  .projects {
+    gap: 15px;
+  }
+
+  .skills-modern {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    gap: 30px;
+  }
+
+  .contact-left h2,
+  .contact-form h2 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile responsiveness for phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 80px 15px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .service-box {
+    padding: 25px 15px;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .service-box h3 {
+    font-size: 18px;
+  }
+
+  .skill-card {
+    padding: 12px 15px;
+  }
+
+  .skill-card img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-card span {
+    font-size: 14px;
+  }
+
+  .contact-left h2,
+  .contact-form h2 {
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px 12px;
+  }
+
+  .contact-form button {
+    padding: 10px;
+    font-size: 14px;
   }
 }
 
