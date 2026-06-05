@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login Test</title>
+</head>
+<body>
+    <h1>Frontend-Only Login Test</h1>
+    <form onsubmit="return handleLogin(event)">
+        <input type="email" id="email" value="admin@lester.com" required>
+        <input type="password" id="password" value="admin123" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('Login button clicked - no network request made');
+            console.log('handleLogin executed');
+            localStorage.setItem('adminToken', 'test-token');
+            localStorage.setItem('adminUser', JSON.stringify({name: 'Admin', email: 'admin@lester.com'}));
+            alert('Token stored in localStorage - check DevTools Storage tab');
+            return false;
+        }
+    </script>
+</body>
+</html>
